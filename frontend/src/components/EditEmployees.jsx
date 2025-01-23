@@ -23,7 +23,7 @@ const Editemployees = () => {
   const handleEdit =()=>{
     if(location.state !=null)
     {
-      axiosInstance.put('http://localhost:3000/employee/update/'+location.state.val._id,employee)
+      axiosInstance.put('/employee/update/'+location.state.val._id,employee)
       .then(()=>{
         alert("Employee updated successfully")
         navigate('/employees')
