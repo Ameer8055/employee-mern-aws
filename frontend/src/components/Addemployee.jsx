@@ -40,7 +40,7 @@ const Addemployee = () => {
       return;
     }
     
-    axiosInstance.post('http://localhost:3000/employee/add', employee)
+    axiosInstance.post('/employee/add', employee)
       .then((res) => {
         alert(res.data.message);
         navigate('/employees');
