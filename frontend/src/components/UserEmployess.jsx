@@ -16,7 +16,7 @@ const UserEmployess = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axiosInstance.get('http://localhost:3000/employee/employeedetails');
+        const response = await axiosInstance.get('/employee/employeedetails');
         setData(response.data);
       } catch (error) {
         alert(error);
