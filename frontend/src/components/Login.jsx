@@ -14,7 +14,7 @@ const Login = () => {
   const loginfunction = () => {
     if (form.Email === "Admin" && form.Password === "Admin123") {
       axios
-        .post("http://localhost:3000/admin/login", form)
+        .post("/api/admin/login", form)
         .then((res) => {
           alert(res.data.message);
           if (res.data.token) {
@@ -27,7 +27,7 @@ const Login = () => {
         });
     } else {
       axios
-        .post("http://localhost:3000/user/login", form)
+        .post("/api/user/login", form)
         .then((res) => {
           alert(res.data.message);
           if (res.data.token) {
