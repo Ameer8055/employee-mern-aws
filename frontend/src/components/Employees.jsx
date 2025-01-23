@@ -15,7 +15,7 @@ const Employees = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axiosInstance.get('http://localhost:3000/employee/employeedetails');
+        const response = await axiosInstance.get('/employee/employeedetails');
         setData(response.data);
       } catch (error) {
         alert(error);
@@ -32,7 +32,7 @@ const Employees = () => {
 
   const deleteData = async (item) => {
     try {
-      await axios.delete(`http://localhost:3000/employee/delete/${item._id}`);
+      await axios.delete(`/employee/delete/${item._id}`);
       window.location.reload();
     } catch (error) {
       alert('Error deleting employee: ' + error);
